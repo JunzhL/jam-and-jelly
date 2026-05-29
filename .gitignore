@@ -18,3 +18,9 @@ desktop.ini
 *.tmp
 *.bak
 .scratch/
+
+# Local scratch notes (may contain secrets)
+note.md
+.env
+.env.*
+!.env.example

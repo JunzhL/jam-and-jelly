@@ -1,6 +1,6 @@
 # 💬 Chat Guide — using the band bot in Slack
 
-Everything happens in the **#jam-and-jelly** Slack channel. You don't need GitHub, Git, or
+Everything happens in the **#all-jam-and-jelly** Slack channel. You don't need GitHub, Git, or
 any app beyond Slack on your phone. Here's everything you can do.
 
 ---
@@ -17,11 +17,11 @@ band to approve. You'll get a reply with a link.
 
 ## Ask the bot to do something
 
-Type **`@Jam & Jelly Bot`** followed by what you want, in plain English:
+Type **`@jar`** followed by what you want, in plain English:
 
-> `@Jam & Jelly Bot what songs do we have scores for?`
-> `@Jam & Jelly Bot get me the latest version of Spanish Joint`
-> `@Jam & Jelly Bot what changes are waiting for approval?`
+> `@jar what songs do we have scores for?`
+> `@jar get me the latest version of Spanish Joint`
+> `@jar what changes are waiting for approval?`
 
 Ask it like you'd ask a person — it'll figure it out or ask you to clarify.
 
@@ -30,7 +30,7 @@ Ask it like you'd ask a person — it'll figure it out or ask you to clarify.
 Two easy ways:
 
 1. **Ask the bot:**
-   > `@Jam & Jelly Bot add a task: find the horn chart for Really Love, for Sam`
+   > `@jar add a task: find the horn chart for Really Love, for Sam`
 2. **From any message:** hover over the message → `⋯` (More actions) → **Create issue in
    Linear**. Fill in the short form.
 
@@ -51,7 +51,7 @@ When someone proposes a change, the bot posts it in the channel with two buttons
 
 ## Get the latest
 
-> `@Jam & Jelly Bot give me the latest`
+> `@jar give me the latest`
 
 The bot tells you what's new.
 
@@ -61,8 +61,8 @@ The bot tells you what's new.
 
 - **You can't break anything.** Every change is reviewed before it counts, and old
   versions are always recoverable.
-- The bot only acts in **#jam-and-jelly** — keep band file chat in that channel.
+- The bot only acts in **#all-jam-and-jelly** — keep band file chat in that channel.
 - Prefer working from a computer with files in a folder? See
   [BAND-GUIDE.md](BAND-GUIDE.md) instead.
-- Something stuck or confusing? Just say so in the channel — `@Jam & Jelly Bot` or a
+- Something stuck or confusing? Just say so in the channel — `@jar` or a
   human will help.

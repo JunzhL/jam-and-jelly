@@ -59,4 +59,4 @@ If you have unsaved work, Claude will offer to save it first so nothing is lost.
 - **You can't break anything.** Every change is reversible, and the shared copy is
   protected — it only updates after an approval.
 - If Claude says something confusing, just ask: *"Explain that simply."*
-- Stuck? Ask in the `#jam-and-jelly` Slack channel.
+- Stuck? Ask in the `#all-jam-and-jelly` Slack channel.
