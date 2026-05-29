@@ -48,11 +48,14 @@ see Part 5. Subscribing to `pulls` here too would just double the notifications.
 
 ### 2.1 Workspace & channel
 - Create a free Slack workspace (or use an existing one) at <https://slack.com/get-started>.
-- Create a channel: `#jam-and-jelly`. Invite the band.
+- Use the workspace-wide channel Slack auto-creates: `#all-<workspace-name>`
+  (for "Jam & Jelly" → `#all-jam-and-jelly`). Invite the band to the workspace; they're
+  added to this channel automatically. (Or create a dedicated channel and use that
+  instead — the bot only cares about the channel ID, not the name.)
 
 ### 2.2 Create the bot's Slack app
 Go to <https://api.slack.com/apps> → **Create New App → From scratch**.
-- Name: `Jam & Jelly Bot`, pick the workspace.
+- Name: `jar`, pick the workspace.
 - **OAuth & Permissions → Bot Token Scopes**, add:
   `chat:write`, `app_mentions:read`, `files:read`, `channels:history`,
   `channels:read`, `commands`
@@ -60,7 +63,7 @@ Go to <https://api.slack.com/apps> → **Create New App → From scratch**.
   ➜ save as **`SLACK_BOT_TOKEN`**
 - **Basic Information → App Credentials:** copy the **Signing Secret**.
   ➜ save as **`SLACK_SIGNING_SECRET`**
-- Invite the bot to the channel: in `#jam-and-jelly`, type `/invite @Jam & Jelly Bot`.
+- Invite the bot to the channel: in `#all-jam-and-jelly`, type `/invite @jar`.
 - Get the channel ID: open the channel → click its name → bottom of the dialog shows an
   ID like `C0123ABCD`. ➜ save as **`SLACK_CHANNEL_ID`**
 
@@ -74,7 +77,7 @@ Go to <https://api.slack.com/apps> → **Create New App → From scratch**.
 - Create a free workspace at <https://linear.app>.
 - Create one team, e.g. `Jam & Jelly` (key `JAM`).
 - Invite the band (free tier = unlimited members).
-- **Settings → Integrations → Slack → Connect.** Choose `#jam-and-jelly` for
+- **Settings → Integrations → Slack → Connect.** Choose `#all-jam-and-jelly` for
   notifications. This is free and needs no code; it also enables "Create issue in Linear"
   from any Slack message (hover a message → `⋯` → *Create issue*).
 - Settings → API → **Personal API key** → create one. ➜ save as **`LINEAR_API_KEY`**
@@ -174,7 +177,7 @@ Create at <https://claude.ai/code/routines> (or run `/schedule` in Claude Code).
 - **Connected tools:** Linear, Slack.
 - **Instructions:**
   > List the open (non-done) issues in the Linear `Jam & Jelly` team. Post a short
-  > "🎵 Still to do" summary to the `#jam-and-jelly` Slack channel with a link to Linear.
+  > "🎵 Still to do" summary to the `#all-jam-and-jelly` Slack channel with a link to Linear.
   > If nothing is open, post a cheerful "all caught up" note.
 
 ---
@@ -203,15 +206,15 @@ live while testing.
       config show a green "Verified".
 - [ ] **PR notification:** open a test PR in the `jam-and-jelly` repo (any small change on
       a branch) → within seconds a message with **Approve / Reject** buttons appears in
-      `#jam-and-jelly`.
+      `#all-jam-and-jelly`.
 - [ ] **Approve works:** click **Approve & Merge** → the PR squash-merges on GitHub and the
       Slack message updates to "✅ merged".
 - [ ] **Reject works:** open another test PR → click **Reject** → the PR closes on GitHub
       and the message updates to "❌ rejected".
-- [ ] **File upload:** drop a small PDF into `#jam-and-jelly` with a caption → the Routine
+- [ ] **File upload:** drop a small PDF into `#all-jam-and-jelly` with a caption → the Routine
       commits it and replies with a PR link.
-- [ ] **Free-form chat:** `@Jam & Jelly Bot what files do we have?` → a sensible reply.
-- [ ] **Task creation:** `@Jam & Jelly Bot add a task: test task` → a new Linear issue,
+- [ ] **Free-form chat:** `@jar what files do we have?` → a sensible reply.
+- [ ] **Task creation:** `@jar add a task: test task` → a new Linear issue,
       and a Slack notification from the Linear integration.
 - [ ] **Digest (if enabled):** run the digest routine once from `claude.ai/code/routines`
       → a "🎵 Still to do" summary posts.

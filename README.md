@@ -19,7 +19,7 @@ see who changed what.
 You do **not** need to know Git or coding. Pick whichever suits you:
 
 1. **From Slack (easiest)** — chat with our band bot, or drop a file straight into the
-   `#jam-and-jelly` channel. See **[docs/CHAT-GUIDE.md](docs/CHAT-GUIDE.md)**.
+   `#all-jam-and-jelly` channel. See **[docs/CHAT-GUIDE.md](docs/CHAT-GUIDE.md)**.
 2. **From your laptop** — keep the files in a folder and let Claude handle the rest.
    See **[docs/BAND-GUIDE.md](docs/BAND-GUIDE.md)**.
 
