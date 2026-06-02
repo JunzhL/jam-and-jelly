@@ -7,6 +7,10 @@ does the technical part for you.
 > Prefer not to install anything? You can do everything from Slack instead — see
 > [CHAT-GUIDE.md](CHAT-GUIDE.md). This laptop guide is the alternative.
 
+> **When to definitely use this guide over Slack:** uploading a big file (over
+> ~2 MB — Slack uploads are capped) or when `@jar` chat is showing as offline.
+> The laptop path always works.
+
 ---
 
 ## One-time setup (about 15 minutes)

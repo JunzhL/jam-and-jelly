@@ -62,7 +62,23 @@ The bot tells you what's new.
 - **You can't break anything.** Every change is reviewed before it counts, and old
   versions are always recoverable.
 - The bot only acts in **#all-jam-and-jelly** — keep band file chat in that channel.
+- **File size limit:** uploads in Slack are capped at ~2 MB. If you have a bigger
+  file (e.g. a long audio recording), the bot will tell you and you can add it via
+  the laptop path instead — see [BAND-GUIDE.md](BAND-GUIDE.md).
 - Prefer working from a computer with files in a folder? See
   [BAND-GUIDE.md](BAND-GUIDE.md) instead.
 - Something stuck or confusing? Just say so in the channel — `@jar` or a
   human will help.
+
+## If `@jar` says "chat is offline"
+
+The conversational `@jar` features need an active Claude paid plan. If that's lapsed,
+the bot will reply with a "chat is offline" message — everything else still works:
+
+| Want to… | Do this instead |
+|----------|-----------------|
+| Add a file | Just attach it in the channel — file uploads always work, even when chat is offline. |
+| Approve / reject a change | Click the buttons on the PR notification — always works. |
+| Create a task | Hover over any message → `⋯` (More actions) → **Create issue in Linear**. |
+| See what's open | Look at the GitHub notifications already in the channel, or open the Linear app. |
+| Anything more complex | Use the laptop guide — [BAND-GUIDE.md](BAND-GUIDE.md). |
