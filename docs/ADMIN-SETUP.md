@@ -144,10 +144,32 @@ Now whenever a PR opens, the Worker posts it to Slack with **Approve / Reject** 
 
 ```
 PR opened ─▶ GitHub webhook ─▶ Worker ─▶ Slack message + [Approve][Reject]
-Approve clicked ─▶ Worker ─▶ GitHub merge API ─▶ "✅ Merged" in Slack
-@bot message / file upload ─▶ Worker ─▶ Claude Routine ─▶ does the work, replies in Slack
-Linear issue changes ─▶ (native) ─▶ Slack
+Approve clicked ─▶ Worker ─▶ GitHub merge API ─▶ Slack message replaced with ✅
+Reject clicked ─▶ Worker ─▶ GitHub close API ─▶ Slack message replaced with ❌
+PR closed (no merge) on GitHub web ─▶ webhook ─▶ Worker ─▶ Slack 🚫 notification
+PR merged ─▶ webhook + commits subscription ─▶ GitHub Slack app announces the commit
+File uploaded in Slack ─▶ Worker (no Routine!) ─▶ GitHub commit + PR ─▶ Slack
+@jar message ─▶ Worker ─▶ Claude Routine ─▶ replies in Slack thread
+                              └ on 401/403 ─▶ Worker posts "chat is offline" fallback
+Linear issue created / changed ─▶ Linear's native Slack integration
+GitHub issue opened / closed ─▶ GitHub's native Slack app
 ```
+
+### Notification matrix (which path delivers each notification)
+
+| Event | Delivered by | Survives Claude Free? |
+|-------|--------------|------------------------|
+| PR opened (with action buttons) | Worker | ✅ |
+| PR merged → commit announced on main | GitHub Slack app (`/github subscribe ... commits`) | ✅ |
+| PR closed via Slack button | Worker (replaces the original PR message) | ✅ |
+| PR closed-without-merge on GitHub web | Worker (`pull_request.closed` handler) | ✅ |
+| File-upload confirmation | Worker | ✅ |
+| GitHub issue opened/closed/labeled | GitHub Slack app (`/github subscribe ... issues`) | ✅ |
+| Linear issue created / status change / assigned | Linear's native Slack integration | ✅ |
+| `@jar` chat reply | Claude Routine | ❌ (Worker posts polite "chat is offline" fallback) |
+
+**Only `@jar` chat depends on Claude.** Everything else is delivered by the Worker or
+by free native integrations that keep working on any plan.
 
 ---
 
