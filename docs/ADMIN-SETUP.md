@@ -244,4 +244,4 @@ live while testing.
 If a step fails, `wrangler tail` shows the Worker's logs; signature errors mean a secret
 is wrong or a Request URL points to the wrong path.
 
-Done — hand the band [`CHAT-GUIDE.md`](CHAT-GUIDE.md) and you're live. 🎶
+Done — hand the band [`GUIDE.md`](GUIDE.md) and you're live. 🎶
