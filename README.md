@@ -14,14 +14,20 @@ see who changed what.
 | `practice-notes/` | Notes from rehearsals and ideas |
 | `docs/` | Guides (start here 👇) |
 
-## How to contribute — two easy ways
+## How to contribute
 
-You do **not** need to know Git or coding. Pick whichever suits you:
+You do **not** need to know Git or coding. There are three paths — pick whichever fits
+the task, mix freely:
 
-1. **From Slack (easiest)** — chat with our band bot, or drop a file straight into the
-   `#all-jam-and-jelly` channel. See **[docs/CHAT-GUIDE.md](docs/CHAT-GUIDE.md)**.
-2. **From your laptop** — keep the files in a folder and let Claude handle the rest.
-   See **[docs/BAND-GUIDE.md](docs/BAND-GUIDE.md)**.
+1. **From Slack (easiest, no install)** — drop files in `#all-jam-and-jelly`, click
+   Approve/Reject buttons, ask `@jar` questions.
+2. **From your laptop with Claude Code** — talk to Claude in plain English to save
+   and share changes.
+3. **From your laptop with terminal `git`** — for those who want full control.
+
+**The full step-by-step guide is here:** **[docs/GUIDE.md](docs/GUIDE.md)** — covers
+all three paths, the daily workflow, how Slack and Linear should be used, and
+troubleshooting. Assumes no prior knowledge of Git, GitHub, or the platforms.
 
 ## How changes are kept safe
 
